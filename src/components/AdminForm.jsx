@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useFormState, useFormStatus } from 'react-dom';
-import { submitAdminForm } from '../../lib/actions/submitAdmin';
+import { submitAdminForm } from '../lib/actions/submitAdmin';
 
 function SubmitButton() {
   const { pending } = useFormStatus();
