@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import GoogleAnalytics from '../components/GoogleAnalytics';
+import { Suspense } from 'react';
 
 export const metadata = {
   title: 'US Energy OS | CatalynQ & Content Hub',
@@ -15,7 +16,9 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <GoogleAnalytics />
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         {children}
       </body>
     </html>
