@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 import GoogleAnalytics from '../components/GoogleAnalytics';
-import { Suspense } from 'react';
+import GoogleAnalytics from '../components/GoogleAnalytics';
 
+export const dynamic = 'force-dynamic';
 export const metadata = {
   title: 'US Energy OS | CatalynQ & Content Hub',
   description: 'The digital connective tissue for the future of energy transition and sustainability.',
@@ -16,9 +17,7 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <Suspense fallback={null}>
-          <GoogleAnalytics />
-        </Suspense>
+        <GoogleAnalytics />
         {children}
       </body>
     </html>
