@@ -1,31 +1,22 @@
 'use client';
 
 import Script from 'next/script';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect, Suspense } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 import { pageview, G_TAG_ID } from '../lib/tracking/ga4';
 
-function GoogleAnalyticsInner() {
+export default function GoogleAnalytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (pathname && G_TAG_ID) {
       pageview(pathname);
     }
-  }, [pathname, searchParams]);
-
-  return null;
-}
-
-export default function GoogleAnalytics() {
+  }, [pathname]);
   if (!G_TAG_ID) return null;
 
   return (
     <>
-      <Suspense fallback={null}>
-        <GoogleAnalyticsInner />
-      </Suspense>
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${G_TAG_ID}`}

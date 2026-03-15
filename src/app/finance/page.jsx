@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+export const dynamic = 'force-dynamic';
 import { TrendingUp, ShieldCheck, Zap } from 'lucide-react';
 
 export default function FinanceCirclePage() {

@@ -1,5 +1,7 @@
 import React from 'react';
 
+export const dynamic = 'force-dynamic';
+
 // Mock Data representing what Supabase will return from the 'listings' table
 const mockListings = [
   {

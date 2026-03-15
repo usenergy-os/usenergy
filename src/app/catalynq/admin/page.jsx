@@ -1,6 +1,8 @@
 import React from 'react';
 import AdminForm from '../../../components/AdminForm';
 
+export const dynamic = 'force-dynamic';
+
 export default function CatalynQAdminPage() {
   return (
     <div className="hq-container" style={{ backgroundColor: '#020617', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>

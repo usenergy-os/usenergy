@@ -1,6 +1,5 @@
 import '../styles/globals.css';
 import GoogleAnalytics from '../components/GoogleAnalytics';
-import GoogleAnalytics from '../components/GoogleAnalytics';
 
 export const dynamic = 'force-dynamic';
 export const metadata = {

@@ -1,5 +1,7 @@
 import React from 'react';
 
+export const dynamic = 'force-dynamic';
+
 // Mock Data representing an Innovator's active listings
 const mockMyListings = [
   {
